@@ -1,5 +1,5 @@
 {
-  "name": "create-project",
+	"name": "create-project",
 	"displayName": "Create Project",
 	"description": "An Extension to create Projects in several Programming Languages",
 	"version": "0.0.1",
@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:create-project.helloWorld"
+		"onCommand:create-project.newDotNetWeb"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "create-project.helloWorld",
-				"title": "Hello World"
+				"command": "create-project.newDotNetWeb",
+				"title": "new C# Project"
 			}
 		]
 	},
