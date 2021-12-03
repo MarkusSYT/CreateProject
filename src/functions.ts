@@ -20,4 +20,15 @@ export class CreateCode implements vscode.Disposable {
         this._terminal.sendText(command);
         this._terminal.show();
     }
+
+    public detectOperatingSystem(): string {
+        const os = require('os');
+        console.log('Platform: ' + os.platform());
+        return os.platform();
+    }
+
+    public createProject(command: string): void {
+        this.executeCommandInTerminal('git init')
+        this.executeCommandInTerminal(command);
+    }
 }

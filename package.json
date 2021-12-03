@@ -10,14 +10,47 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:create-project.newDotNetWeb"
+		"onCommand:create-project.newDotNetWeb",
+		"onCommand:create-project.newDotNetConsole",
+		"onCommand:create-project.newDotNetWebApi",
+		"onCommand:create-project.newGo",
+		"onCommand:create-project.newPython",
+		"onCommand:create-project.newJava"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "create-project.newDotNetWeb",
-				"title": "new C# Project"
+				"title": "new ASP.Net Project"
+			},
+			{
+				"command": "create-project.newDotNetConsole",
+				"title": "new C# Console Project"
+			},
+			{
+				"command": "create-project.newDotNetWebApi",
+				"title": "new ASP.Net WebApi Project"
+			},
+			{
+				"command": "create-project.newGo",
+				"title": "new Go Project"
+			},
+			{
+				"command": "create-project.newPython",
+				"title": "new Python Project"
+			},
+			{
+				"command": "create-project.newJava",
+				"title": "new Java Project"
+			},
+			{
+				"command": "create-project.newJupyter",
+				"title": "new Jupyter Project"
+			},
+			{
+				"command": "create-project.newDjango",
+				"title": "new Django Project"
 			}
 		]
 	},
