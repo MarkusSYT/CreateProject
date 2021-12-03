@@ -1,25 +1,39 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import { CreateCode } from './functions';
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-
 export function activate(context: vscode.ExtensionContext) {
 
-	console.log('Congratulations, your extension "create-project" is now active!');
-	let disposable = vscode.commands.registerCommand('create-project.newDotNet', () => {
+	console.log('Create-Project is successfully activated!');
 
-		vscode.commands.executeCommand('dotnet new console test');
+	//C# and DotNet
+	let cshap_console = vscode.commands.registerCommand('create-project.newDotNet', () => {
+
+		vscode.commands.executeCommand('dotnet new console --force');
 	});
-	let disposable2 = vscode.commands.registerCommand('create-project.newDotNetWeb', () => {
+	let csharp_asp_web = vscode.commands.registerCommand('create-project.newDotNetWeb', () => {
 		let c = new CreateCode();
-		c.executeCommandInTerminal("dotnet new web");
+		c.executeCommandInTerminal("dotnet new web --force");
+	});
+	let csharp_asp_web_api = vscode.commands.registerCommand('create-project.newDotNetWebApi', () => {
+		let c = new CreateCode();
+		c.executeCommandInTerminal("dotnet new webapi --force");
+	});
+	//GO
+	let go = vscode.commands.registerCommand('create-project.newGoWeb', () => {
+		let c = new CreateCode();
+		c.executeCommandInTerminal("go mod init project.local/code/");
+	});
+	//Python
+	let python = vscode.commands.registerCommand('create-project.newPython', () => {
+		let c = new CreateCode();
+		c.executeCommandInTerminal("python -m venv venv");
+	});
+	//Java
+	let java = vscode.commands.registerCommand('create-project.newJava', () => {
+		let c = new CreateCode();
+		c.executeCommandInTerminal("mvn package");
 	});
 
-	context.subscriptions.push(disposable);
 }
 
-// this method is called when your extension is deactivated
 export function deactivate() { }
