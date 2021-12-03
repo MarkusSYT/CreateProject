@@ -15,7 +15,9 @@
 		"onCommand:create-project.newDotNetWebApi",
 		"onCommand:create-project.newGo",
 		"onCommand:create-project.newPython",
-		"onCommand:create-project.newJava"
+		"onCommand:create-project.newJava",
+		"onCommand:create-project.newDjango",
+		"onCommand:create-project.newJupyter"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
